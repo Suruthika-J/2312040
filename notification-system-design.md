@@ -101,3 +101,39 @@ Reason for Choosing the Schema
 
 
 ---- 
+
+
+# Stage 3 - SQL Query Optimization
+-
+
+## SQL Query
+
+```sql
+SELECT notification_id, title, type, created_at
+FROM notifications
+WHERE type = 'Placement'
+ORDER BY created_at DESC
+LIMIT 10;
+```
+
+---
+
+## Indexing
+
+To make the query faster, indexes can be created on columns that are used frequently for searching and sorting.
+
+```sql
+CREATE INDEX idx_type ON notifications(type);
+CREATE INDEX idx_created_at ON notifications(created_at);
+```
+
+---
+
+## Why Indexing?
+
+- Makes searching faster.
+- Improves filtering based on notification type.
+- Helps display the latest notifications quickly.
+- Reduces the time taken to execute queries.
+
+---
