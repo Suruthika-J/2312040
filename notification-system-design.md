@@ -162,3 +162,27 @@ Load additional notifications only when the user scrolls or requests more data. 
 ### 5. Asynchronous Processing
 
 Background tasks can be used for sending notifications without affecting the application's response time.
+___________
+# Stage 5 - Reliable Notification Delivery
+
+## Improvements to the Notification System
+
+### 1. Message Queue
+
+Instead of sending all notifications directly, they can be added to a message queue. This helps process notifications one by one without overloading the server.
+
+### 2. Retry Mechanism
+
+If a notification fails to send because of a temporary error, the system should automatically retry sending it after a short delay.
+
+### 3. Database Transactions
+
+Transactions ensure that notifications are stored correctly in the database. If an error occurs during the process, the changes can be rolled back to maintain data consistency.
+
+### 4. Logging
+
+Every successful or failed notification should be logged using the logging middleware. This helps in monitoring and debugging the notification system.
+
+### 5. Error Handling
+
+Proper exception handling should be implemented so that one failed notification does not stop the delivery of other notifications. 
