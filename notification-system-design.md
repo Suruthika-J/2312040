@@ -80,3 +80,24 @@ GET /notifications?type=Placement
 
 Returns notifications based on the selected category such as Placement, Result, or Event.
 
+-----
+
+# Stage 2 - Database Schema Design
+
+Introduction
+
+↓
+
+Notifications Table
+
+↓
+
+Column Description
+
+↓
+
+Reason for Choosing the Schema
+
+
+
+---- 
