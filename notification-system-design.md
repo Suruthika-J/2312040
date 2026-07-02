@@ -137,3 +137,28 @@ CREATE INDEX idx_created_at ON notifications(created_at);
 - Reduces the time taken to execute queries.
 
 ---
+
+
+# Stage 4 - Performance Improvements
+
+## Techniques to Improve Performance
+
+### 1. Pagination
+
+Display notifications in smaller batches instead of loading all notifications at once. This reduces the response time and improves the user experience.
+
+### 2. Caching
+
+Frequently accessed notifications can be stored in cache to reduce repeated database queries and improve response speed.
+
+### 3. Database Indexing
+
+Indexes on columns like `type` and `created_at` help retrieve notifications faster.
+
+### 4. Lazy Loading
+
+Load additional notifications only when the user scrolls or requests more data. This reduces the initial loading time.
+
+### 5. Asynchronous Processing
+
+Background tasks can be used for sending notifications without affecting the application's response time.
