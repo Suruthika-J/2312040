@@ -23,9 +23,7 @@ GET /notifications
 **Description**
 
 This API returns all notifications available for the logged-in user.
-
 **Sample Response**
-
 ```json
 {
   "notifications": [
